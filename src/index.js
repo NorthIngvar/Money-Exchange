@@ -27,6 +27,7 @@ module.exports = function makeExchange(currency) {
     result.N = Math.floor(temporary / 5);
     temporary = temporary - result.N * 5;
     result.P = Math.floor(temporary / 1);
+    temporary = temporary - result.P;
 
     for (let key in result) {
         if (result[key] === 0) {
